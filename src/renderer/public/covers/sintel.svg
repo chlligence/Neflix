@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Sintel">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#080f21"/>
+      <stop offset="0.55" stop-color="#23355c"/>
+      <stop offset="1" stop-color="#7b9aa4"/>
+    </linearGradient>
+    <radialGradient id="moon" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="0.55" stop-color="#bcd7e6"/>
+      <stop offset="1" stop-color="#bcd7e6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="peak" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b5cad4"/>
+      <stop offset="0.4" stop-color="#53677c"/>
+      <stop offset="1" stop-color="#121a2b"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.08"/></feComponentTransfer>
+      <feComposite in2="SourceGraphic" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1210" cy="230" r="180" fill="url(#moon)"/>
+  <circle cx="1210" cy="230" r="92" fill="#eaf5fb"/>
+  <g fill="#0a1223" opacity="0.8">
+    <path d="M0 900 L320 390 L480 590 L650 420 L920 900 Z"/>
+    <path d="M590 900 L980 300 L1150 560 L1320 390 L1600 900 Z"/>
+  </g>
+  <path d="M0 900 L300 500 L440 680 L600 520 L780 900 Z" fill="url(#peak)" opacity="0.62"/>
+  <path d="M1450 900 L1180 470 L1060 650 L930 520 L800 900 Z" fill="url(#peak)" opacity="0.4"/>
+  <g fill="none" stroke="#8ef0de" stroke-width="6" stroke-linecap="round" opacity="0.8">
+    <path d="M520 680 C 620 560 710 540 830 610 C 950 680 1030 640 1110 550"/>
+    <path d="M480 720 C 610 640 690 620 790 680 C 900 745 1000 710 1080 610"/>
+  </g>
+  <g fill="#0a1524" opacity="0.9">
+    <circle cx="760" cy="660" r="28"/>
+    <path d="M732 690 L790 690 L810 780 L712 780 Z"/>
+    <path d="M735 655 L700 610 L715 600 L755 642 Z"/>
+  </g>
+  <g fill="none" stroke="#d9f8ff" stroke-width="2" opacity="0.22">
+    <path d="M0 760 C 300 720 500 780 800 740 C 1100 700 1350 760 1600 730"/>
+    <path d="M0 800 C 320 770 540 820 820 790 C 1120 760 1380 810 1600 780"/>
+  </g>
+  <rect width="1600" height="900" filter="url(#grain)" opacity="0.8"/>
+  <rect x="64" y="64" width="1472" height="772" fill="none" stroke="#d1eef7" stroke-opacity="0.15" stroke-width="2"/>
+  <text x="96" y="826" fill="#e5f8ff" font-family="Segoe UI, sans-serif" font-size="26" letter-spacing="8" opacity="0.7">OPEN MOVIE / 04</text>
+</svg>

@@ -1,0 +1,106 @@
+[
+  {
+    "id": "big-buck-bunny",
+    "title": "Big Buck Bunny",
+    "description": "阳光草甸上的一场温柔反击。Blender 基金会开源动画短片，用于验证 HLS 多码率播放。",
+    "cover": "covers/bunny.svg",
+    "duration": 634,
+    "year": 2008,
+    "qualities": ["1080p", "720p", "480p", "360p"],
+    "tags": ["动画", "喜剧", "HLS"],
+    "sources": [
+      {
+        "type": "hls",
+        "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
+      }
+    ]
+  },
+  {
+    "id": "tears-of-steel",
+    "title": "Tears of Steel",
+    "description": "未来阿姆斯特丹，人类与机器抢夺最后一段记忆。用于验证 HLS 播放与进度续播。",
+    "cover": "covers/tears.svg",
+    "duration": 734,
+    "year": 2012,
+    "qualities": ["1080p", "720p", "480p", "360p"],
+    "tags": ["科幻", "短片", "HLS"],
+    "sources": [
+      {
+        "type": "hls",
+        "url": "https://test-streams.mux.dev/tos_ismc/main.m3u8"
+      }
+    ]
+  },
+  {
+    "id": "angel-one",
+    "title": "Angel One",
+    "description": "城市上空的一次短暂救援。Shaka 官方演示片源，用于验证 DASH 自动码率切换。",
+    "cover": "covers/angel.svg",
+    "duration": 60,
+    "year": 2018,
+    "qualities": ["1080p", "720p", "576p", "480p", "360p"],
+    "tags": ["动作", "演示", "DASH"],
+    "sources": [
+      {
+        "type": "dash",
+        "url": "https://storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd"
+      }
+    ]
+  },
+  {
+    "id": "sintel",
+    "title": "Sintel",
+    "description": "少女与幼龙穿越雪原的旅程。单码率 DASH 演示，用于验证低清晰度与播放失败提示。",
+    "cover": "covers/sintel.svg",
+    "duration": 888,
+    "year": 2010,
+    "qualities": ["720p"],
+    "tags": ["奇幻", "动画", "DASH"],
+    "sources": [
+      {
+        "type": "dash",
+        "url": "https://storage.googleapis.com/shaka-demo-assets/sintel-mp4-only/dash.mpd"
+      }
+    ]
+  },
+  {
+    "id": "tears-of-steel-dual",
+    "title": "Tears of Steel · 双格式版",
+    "description": "同一部短片的 HLS 与 DASH 双播放源，用于验证播放源选择与 CDN 配置接入。",
+    "cover": "covers/steel.svg",
+    "duration": 734,
+    "year": 2012,
+    "qualities": ["1080p", "720p", "480p"],
+    "tags": ["科幻", "双格式", "CDN"],
+    "sources": [
+      {
+        "type": "hls",
+        "url": "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8"
+      },
+      {
+        "type": "dash",
+        "url": "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.mpd"
+      }
+    ]
+  },
+  {
+    "id": "big-buck-bunny-dark-truths",
+    "title": "Big Buck Bunny · Dark Truths",
+    "description": "同一角色的暗色剪辑。用于验证手动清晰度选择、倍速与全屏控制。",
+    "cover": "covers/truths.svg",
+    "duration": 634,
+    "year": 2020,
+    "qualities": ["1080p", "720p", "480p"],
+    "tags": ["动画", "实验", "HLS + DASH"],
+    "sources": [
+      {
+        "type": "hls",
+        "url": "https://storage.googleapis.com/shaka-demo-assets/bbb-dark-truths-hls/hls.m3u8"
+      },
+      {
+        "type": "dash",
+        "url": "https://storage.googleapis.com/shaka-demo-assets/bbb-dark-truths/dash.mpd"
+      }
+    ]
+  }
+]

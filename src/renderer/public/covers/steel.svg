@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Tears of Steel dual format">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050b10"/>
+      <stop offset="0.55" stop-color="#173646"/>
+      <stop offset="1" stop-color="#718b8f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#d6fbff" stop-opacity="0.85"/>
+      <stop offset="0.4" stop-color="#58c5de" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#58c5de" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.08"/></feComponentTransfer>
+      <feComposite in2="SourceGraphic" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="800" cy="420" r="430" fill="url(#glow)"/>
+  <g transform="translate(800 430)" fill="none" stroke="#c4eef7" stroke-opacity="0.55">
+    <circle r="290" stroke-width="2"/>
+    <circle r="230" stroke-width="1"/>
+    <circle r="170" stroke-width="2" stroke-dasharray="18 12"/>
+    <ellipse rx="360" ry="120" stroke-width="2" transform="rotate(-18)"/>
+    <ellipse rx="360" ry="120" stroke-width="2" transform="rotate(42)"/>
+  </g>
+  <g fill="#07141b" stroke="#7fc8d9" stroke-width="2">
+    <path d="M560 280 L760 200 L950 280 L1010 470 L910 620 L700 640 L580 500 Z"/>
+    <rect x="660" y="340" width="300" height="52" rx="24"/>
+    <path d="M620 640 L580 830 L700 830 L730 660 Z"/>
+    <path d="M870 640 L940 830 L1060 830 L990 660 Z"/>
+  </g>
+  <g fill="#9ff5ff">
+    <circle cx="744" cy="366" r="10"/>
+    <circle cx="876" cy="366" r="10"/>
+  </g>
+  <g stroke="#e7fdff" stroke-width="1" opacity="0.24">
+    <path d="M0 150 H1600 M0 750 H1600"/>
+    <path d="M190 0 V900 M1410 0 V900"/>
+  </g>
+  <g fill="#bfeaf2" font-family="Segoe UI, sans-serif" opacity="0.7">
+    <text x="96" y="826" font-size="26" letter-spacing="8">OPEN MOVIE / 05</text>
+    <text x="1260" y="826" font-size="22" letter-spacing="4">HLS + DASH</text>
+  </g>
+  <rect width="1600" height="900" filter="url(#grain)" opacity="0.8"/>
+  <rect x="64" y="64" width="1472" height="772" fill="none" stroke="#d5f6ff" stroke-opacity="0.16" stroke-width="2"/>
+</svg>

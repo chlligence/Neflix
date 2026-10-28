@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Angel One">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a0710"/>
+      <stop offset="0.5" stop-color="#4c1220"/>
+      <stop offset="1" stop-color="#10070a"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0.5" stop-color="#ffcf7a" stop-opacity="0"/>
+      <stop offset="0.7" stop-color="#ffd27d" stop-opacity="0.9"/>
+      <stop offset="0.78" stop-color="#ff6b3d" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#ff6b3d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="figure" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e7d9c2"/>
+      <stop offset="1" stop-color="#6c5044"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.09"/></feComponentTransfer>
+      <feComposite in2="SourceGraphic" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g fill="#0b0608" opacity="0.85">
+    <rect x="80" y="470" width="130" height="430"/>
+    <rect x="240" y="380" width="90" height="520"/>
+    <rect x="370" y="540" width="160" height="360"/>
+    <rect x="1120" y="420" width="120" height="480"/>
+    <rect x="1280" y="330" width="90" height="570"/>
+    <rect x="1410" y="500" width="140" height="400"/>
+  </g>
+  <g fill="#ffb26b" opacity="0.5">
+    <rect x="262" y="420" width="10" height="16"/>
+    <rect x="292" y="470" width="10" height="16"/>
+    <rect x="1142" y="468" width="10" height="16"/>
+    <rect x="1302" y="386" width="10" height="16"/>
+  </g>
+  <circle cx="790" cy="320" r="330" fill="url(#halo)"/>
+  <circle cx="790" cy="320" r="230" fill="none" stroke="#ffd27d" stroke-width="3" opacity="0.55"/>
+  <g fill="url(#figure)">
+    <circle cx="790" cy="300" r="62"/>
+    <path d="M742 356 C 750 432 730 560 700 700 L 880 700 C 850 560 830 432 838 356 Z"/>
+    <path d="M708 405 C 650 400 590 430 560 490 C 610 500 670 480 720 450 Z"/>
+    <path d="M872 405 C 930 400 990 430 1020 490 C 970 500 910 480 860 450 Z"/>
+  </g>
+  <path d="M700 700 C 710 760 680 810 620 840 C 760 830 820 790 880 700 Z" fill="#a88a72" opacity="0.55"/>
+  <g fill="#fff2cf" opacity="0.7">
+    <circle cx="450" cy="210" r="3"/><circle cx="1010" cy="160" r="2"/><circle cx="1180" cy="280" r="3"/>
+    <circle cx="330" cy="300" r="2"/><circle cx="980" cy="600" r="2"/>
+  </g>
+  <rect width="1600" height="900" filter="url(#grain)" opacity="0.8"/>
+  <rect x="64" y="64" width="1472" height="772" fill="none" stroke="#ffe5c4" stroke-opacity="0.15" stroke-width="2"/>
+  <text x="96" y="826" fill="#ffe9cf" font-family="Segoe UI, sans-serif" font-size="26" letter-spacing="8" opacity="0.72">OPEN MOVIE / 03</text>
+</svg>

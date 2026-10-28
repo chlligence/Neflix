@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Big Buck Bunny Dark Truths">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#030a08"/>
+      <stop offset="0.55" stop-color="#0e2a21"/>
+      <stop offset="1" stop-color="#30473a"/>
+    </linearGradient>
+    <radialGradient id="light" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#c8ffb1" stop-opacity="0.7"/>
+      <stop offset="0.45" stop-color="#6bc47a" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#6bc47a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.12"/></feComponentTransfer>
+      <feComposite in2="SourceGraphic" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="980" cy="430" rx="540" ry="420" fill="url(#light)"/>
+  <g fill="#010504" opacity="0.92">
+    <path d="M0 640 C 200 520 390 560 560 640 C 760 730 940 520 1120 600 C 1300 680 1440 620 1600 560 L1600 900 L0 900 Z"/>
+    <g>
+      <ellipse cx="900" cy="690" rx="150" ry="120"/>
+      <circle cx="900" cy="545" r="76"/>
+      <ellipse cx="864" cy="440" rx="25" ry="105" transform="rotate(-12 864 440)"/>
+      <ellipse cx="932" cy="436" rx="25" ry="110" transform="rotate(10 932 436)"/>
+    </g>
+  </g>
+  <g fill="none" stroke="#8fdf9a" stroke-width="2" opacity="0.25">
+    <circle cx="900" cy="545" r="120"/>
+    <circle cx="900" cy="545" r="180"/>
+    <circle cx="900" cy="545" r="240"/>
+  </g>
+  <g fill="#a5f0ad" opacity="0.6">
+    <circle cx="182" cy="302" r="2"/><circle cx="344" cy="230" r="1.5"/><circle cx="1220" cy="222" r="2"/>
+    <circle cx="1350" cy="360" r="1.5"/><circle cx="520" cy="180" r="1.5"/>
+  </g>
+  <path d="M400 900 C 430 760 550 700 720 720 C 700 800 730 860 780 900 Z" fill="#07130e" opacity="0.8"/>
+  <rect width="1600" height="900" filter="url(#grain)" opacity="0.9"/>
+  <rect x="64" y="64" width="1472" height="772" fill="none" stroke="#b6ffc4" stroke-opacity="0.14" stroke-width="2"/>
+  <text x="96" y="826" fill="#d8ffdf" font-family="Segoe UI, sans-serif" font-size="26" letter-spacing="8" opacity="0.68">OPEN MOVIE / 06</text>
+</svg>

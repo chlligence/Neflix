@@ -1,0 +1,41 @@
+{
+  "page": 1,
+  "pageSize": 2,
+  "total": 6,
+  "items": [
+    {
+      "id": "big-buck-bunny",
+      "title": "Big Buck Bunny",
+      "description": "阳光草甸上的一场温柔反击。",
+      "cover": "https://cdn.example.com/images/big-buck-bunny.jpg",
+      "duration": 634,
+      "year": 2008,
+      "qualities": ["1080p", "720p", "480p", "360p"],
+      "sources": [
+        {
+          "type": "hls",
+          "url": "videos/big-buck-bunny/master.m3u8"
+        }
+      ]
+    },
+    {
+      "id": "tears-of-steel",
+      "title": "Tears of Steel",
+      "description": "未来阿姆斯特丹，人类与机器抢夺最后一段记忆。",
+      "cover": "https://cdn.example.com/images/tears-of-steel.jpg",
+      "duration": 734,
+      "year": 2012,
+      "qualities": ["1080p", "720p", "480p"],
+      "sources": [
+        {
+          "type": "hls",
+          "url": "videos/tears-of-steel/master.m3u8"
+        },
+        {
+          "type": "dash",
+          "url": "videos/tears-of-steel/manifest.mpd"
+        }
+      ]
+    }
+  ]
+}

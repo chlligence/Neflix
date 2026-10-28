@@ -1,0 +1,30 @@
+# Dependencies and build output
+node_modules/
+out/
+release/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Logs and temp files
+*.log
+.tmp/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.vs/
+*.suo
+*.swp
+*~

@@ -1,0 +1,103 @@
+[
+  {
+    "id": "local-hls",
+    "title": "本地验收 · HLS",
+    "description": "本地 FFmpeg 转码的 1080p / 720p / 540p HLS，通过本地 HTTP CDN 提供 Range 与 CORS。",
+    "cover": "covers/bunny.svg",
+    "duration": 18,
+    "year": 2026,
+    "qualities": ["1080p", "720p", "540p"],
+    "tags": ["本地验收", "HLS"],
+    "sources": [
+      { "type": "hls", "url": "media/test/hls/master.m3u8" }
+    ]
+  },
+  {
+    "id": "local-dash",
+    "title": "本地验收 · DASH",
+    "description": "同一个转码任务生成的 DASH，用于验证生产 HTTP 配置下的 MPD 解析、Range 与 ABR。",
+    "cover": "covers/steel.svg",
+    "duration": 18,
+    "year": 2026,
+    "qualities": ["1080p", "720p", "540p"],
+    "tags": ["本地验收", "DASH"],
+    "sources": [
+      { "type": "dash", "url": "media/test/dash/manifest.mpd" }
+    ]
+  },
+  {
+    "id": "missing-cdn",
+    "title": "异常验收 · CDN 404",
+    "description": "播放地址指向不存在的 HLS 清单，用于验证 CDN 地址失效时的错误提示与重试。",
+    "cover": "covers/tears.svg",
+    "duration": 12,
+    "qualities": ["720p"],
+    "tags": ["异常验收", "404"],
+    "sources": [
+      { "type": "hls", "url": "media/missing/master.m3u8" }
+    ]
+  },
+  {
+    "id": "broken-manifest",
+    "title": "异常验收 · 清单损坏",
+    "description": "接口返回无法访问的子清单，用于验证 HLS 清单解析失败提示。",
+    "cover": "covers/angel.svg",
+    "duration": 12,
+    "qualities": ["720p"],
+    "tags": ["异常验收", "清单"],
+    "sources": [
+      { "type": "hls", "url": "media/broken/master.m3u8" }
+    ]
+  },
+  {
+    "id": "unsupported-format",
+    "title": "异常验收 · MP4 不支持",
+    "description": "播放源为 MP4，验证仅支持 HLS/DASH 时的格式不支持提示。",
+    "cover": "covers/sintel.svg",
+    "duration": 12,
+    "qualities": ["720p"],
+    "tags": ["异常验收", "格式"],
+    "sources": [
+      { "type": "mp4", "url": "media/test/source.mp4" }
+    ]
+  },
+  {
+    "id": "unreachable-network",
+    "title": "异常验收 · 网络不可达",
+    "description": "播放地址指向不可达端口，用于验证网络错误提示与重试。",
+    "cover": "covers/truths.svg",
+    "duration": 12,
+    "qualities": ["720p"],
+    "tags": ["异常验收", "网络"],
+    "sources": [
+      { "type": "hls", "url": "http://127.0.0.1:1/unreachable.m3u8" }
+    ]
+  },
+  {
+    "id": "stalled-stream",
+    "title": "异常验收 · 缓冲超时",
+    "description": "清单正常但视频分片永不返回，用于验证缓冲超时提示与重试入口。",
+    "cover": "covers/truths.svg",
+    "duration": 6,
+    "qualities": ["360p"],
+    "tags": ["异常验收", "缓冲"],
+    "sources": [
+      { "type": "hls", "url": "media/stall/master.m3u8" }
+    ]
+  },
+  {
+    "id": "widevine-drm",
+    "title": "异常验收 · DRM",
+    "description": "公有 Widevine 加密演示流且未配置许可证服务，用于验证 DRM 提示。",
+    "cover": "covers/angel.svg",
+    "duration": 60,
+    "qualities": ["1080p", "720p"],
+    "tags": ["异常验收", "DRM"],
+    "sources": [
+      {
+        "type": "dash",
+        "url": "https://storage.googleapis.com/shaka-demo-assets/angel-one-widevine/dash.mpd"
+      }
+    ]
+  }
+]

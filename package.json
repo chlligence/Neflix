@@ -1,0 +1,47 @@
+{
+  "name": "neflix-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "面向 Windows / macOS 的在线视频播放桌面端 MVP",
+  "author": "Neflix Desktop Team",
+  "license": "MIT",
+  "main": "./out/main/index.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "electron-vite dev",
+    "start": "electron-vite preview",
+    "typecheck:node": "tsc --noEmit -p tsconfig.node.json",
+    "typecheck:web": "tsc --noEmit -p tsconfig.web.json",
+    "typecheck": "npm run typecheck:node && npm run typecheck:web",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "icon": "node scripts/generate-icon.mjs",
+    "mock:cdn": "node scripts/mock-cdn-server.mjs",
+    "load:mock": "node scripts/load-test-mock.mjs",
+    "build": "npm run typecheck && electron-vite build",
+    "dist": "npm run build && electron-builder",
+    "dist:win": "npm run build && electron-builder --win",
+    "dist:mac": "npm run build && electron-builder --mac",
+    "pack:win": "npm run build && electron-builder --win --dir",
+    "pack:mac": "npm run build && electron-builder --mac --dir"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "shaka-player": "^5.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "electron": "^45.0.0",
+    "electron-builder": "^26.18.0",
+    "electron-vite": "^6.0.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}
